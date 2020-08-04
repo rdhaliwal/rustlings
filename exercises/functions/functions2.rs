@@ -1,13 +1,14 @@
 // functions2.rs
-// Make me compile! Execute `rustlings hint functions2` for hints :)
 
-// I AM NOT DONE
+// variable name: type.
+// let thing: u8
+// fn thing(some: u8) {}
 
 fn main() {
     call_me(3);
 }
 
-fn call_me(num) {
+fn call_me(num: u8) {
     for i in 0..num {
         println!("Ring! Call number {}", i + 1);
     }

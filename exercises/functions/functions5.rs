@@ -1,7 +1,4 @@
 // functions5.rs
-// Make me compile! Execute `rustlings hint functions5` for hints :)
-
-// I AM NOT DONE
 
 fn main() {
     let answer = square(3);
@@ -9,5 +6,10 @@ fn main() {
 }
 
 fn square(num: i32) -> i32 {
-    num * num;
+    num * num
+
+    // Either you explicitly return and use the semi-colon
+    //   return thing;
+    // or you just use the variable, without the semi-colon
+    //   thing
 }
