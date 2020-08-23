@@ -1,10 +1,13 @@
 // enums3.rs
 // Address all the TODOs to make the tests pass!
 
-// I AM NOT DONE
+// https://doc.rust-lang.org/book/ch06-02-match.html
 
 enum Message {
-    // TODO: implement the message variant types based on their usage below
+    Quit,
+    Echo(String),
+    Move(Point),
+    ChangeColor((u8, u8, u8)),
 }
 
 struct Point {
@@ -36,7 +39,19 @@ impl State {
     }
 
     fn process(&mut self, message: Message) {
-        // TODO: create a match expression to process the different message variants
+        match message {
+            Message::Quit => {
+                self.quit();
+            },
+            Message::Move(point) => {
+                self.move_position(point);
+            },
+            Message::ChangeColor(color) => {
+                self.change_color(color);
+            },
+            // Default/catch all case
+            _ => (),
+        }
     }
 }
 
@@ -61,5 +76,4 @@ mod tests {
         assert_eq!(state.position.y, 15);
         assert_eq!(state.quit, true);
     }
-
 }
