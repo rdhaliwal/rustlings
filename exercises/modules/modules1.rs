@@ -1,10 +1,9 @@
 // modules1.rs
 // Make me compile! Execute `rustlings hint modules1` for hints :)
 
-// I AM NOT DONE
-
 mod sausage_factory {
-    fn make_sausage() {
+    // Have to explicitly say pub. Private by default.
+    pub fn make_sausage() {
         println!("sausage!");
     }
 }
